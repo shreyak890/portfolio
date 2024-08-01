@@ -1,0 +1,85 @@
+// script.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadEntries();
+    document.getElementById('entry-text').focus(); // Auto focus on the textarea
+});
+
+function addEntry() {
+    const entryText = document.getElementById('entry-text').value;
+    const fileInput = document.getElementById('video-upload');
+    const videoFile = fileInput.files[0];
+
+    if (!videoFile) {
+        alert('Please select a video file.');
+        return;
+    }
+    
+    if (entryText.trim() === '') {
+        alert('Please enter a note for your video entry.');
+        return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        const entries = getEntries();
+        const entryId = Date.now();
+        entries.push({
+            id: entryId,
+            text: entryText,
+            videoSrc: e.target.result
+        });
+        saveEntries(entries);
+
+        document.getElementById('entry-text').value = '';
+        fileInput.value = '';
+        displayEntries();
+    };
+    reader.readAsDataURL(videoFile);
+}
+
+function deleteEntry(entryId) {
+    let entries = getEntries();
+    entries = entries.filter(entry => entry.id !== entryId);
+    saveEntries(entries);
+    displayEntries();
+}
+
+function getEntries() {
+    const entriesJSON = localStorage.getItem('videoDiaryEntries');
+    return entriesJSON ? JSON.parse(entriesJSON) : [];
+}
+
+function saveEntries(entries) {
+    localStorage.setItem('videoDiaryEntries', JSON.stringify(entries));
+}
+
+function loadEntries() {
+    displayEntries();
+}
+
+function displayEntries() {
+    const entries = getEntries();
+    const entryList = document.getElementById('entry-list');
+    entryList.innerHTML = '';
+    
+    entries.forEach(entry => {
+        const li = document.createElement('li');
+        
+        const video = document.createElement('video');
+        video.src = entry.videoSrc;
+        video.controls = true;
+        
+        const text = document.createElement('p');
+        text.textContent = entry.text;
+        
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.onclick = () => deleteEntry(entry.id);
+        
+        li.appendChild(video);
+        li.appendChild(text);
+        li.appendChild(deleteButton);
+        entryList.appendChild(li);
+    });
+}

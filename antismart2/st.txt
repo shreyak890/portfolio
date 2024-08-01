@@ -1,0 +1,139 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    max-width: 1200px;
+    margin-top: 40px;
+}
+
+/* Flex Container for Forms */
+.form-container {
+    display: flex;
+    flex-direction: column; /* Stack forms vertically */
+    gap: 20px;
+    width: 100%;
+}
+
+/* Form Styling */
+.sign-in-form, .login-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Form Hover Effect */
+.sign-in-form:hover, .login-form:hover {
+    background-color: #e9f5ff; /* Light blue background on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+    transform: scale(1.02); /* Slightly enlarge the form */
+}
+
+/* Heading Styling */
+h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+/* Input Fields Styling */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Message Styling */
+#signInMessage, #loginMessage {
+    margin-top: 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 800px) {
+    .form-container {
+        padding: 10px;
+    }
+
+    .sign-in-form, .login-form {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    input, button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    .sign-in-form, .login-form {
+        padding: 15px;
+    }
+
+    input, button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+}

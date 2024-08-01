@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    background-size: cover;
+    padding: 0;
+    
+}
+#videoBG {
+    left:0;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Place video behind all other content */
+}
+.container-fluid{
+    background-color: rgba(255, 255, 255, 0.887);
+    
+}
+h1{
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.Anti-Smartphone {
+    font-size: large;
+    text-align: center;
+    background-color: rgb(194, 199, 250);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(226, 107, 107, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    font-style: normal;
+}
+
+.settings {
+    margin-bottom: 20px;
+}
+
+.timer {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type="number"] {
+    padding: 5px;
+    width: 60px;
+    text-align: center;
+}

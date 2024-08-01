@@ -1,0 +1,145 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    background:url('im.jpg');
+    background-size: cover;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    width: 100%;
+    padding: 20px;
+    max-width: 800px; /* Adjust max-width to make forms smaller */
+    margin-top: 40px; /* Add gap at the top */
+}
+
+/* Flex Container for Forms */
+.form-container {
+    display: flex;
+    flex-direction: column; /* Stack forms vertically */
+    gap: 20px;
+    width: 100%;
+}
+
+/* Form Styling */
+.sign-in-form, .login-form {
+    background: rgba(255, 255, 255, 0.259); /* Semi-transparent background */
+    padding: 20px; /* Increase padding for better spacing */
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Slightly more pronounced shadow */
+    width: 100%;
+    max-width: 400px; /* Make forms smaller */
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Form Hover Effect */
+.sign-in-form:hover, .login-form:hover {
+    background-color: rgba(199, 101, 224, 0.585); /* Light blue background on hover with transparency */
+    box-shadow: 0 0 12px rgba(152, 13, 170, 0.866); /* More pronounced shadow on hover */
+    transform: scale(1.02); /* Slightly enlarge the form */
+}
+
+/* Heading Styling */
+h2 {
+    margin-bottom: 15px; /* Adjust margin for heading */
+    font-size: 20px; /* Adjust font size */
+    text-align: center;
+    color: #333; /* Ensure the text color contrasts with the background */
+}
+
+/* Label Styling */
+label {
+    display: block;
+    margin: 8px 0 4px; /* Adjust margins for label */
+    color: #333; /* Ensure label text is readable */
+}
+
+/* Input Fields Styling */
+input {
+    width: 100%;
+    padding: 10px; /* Adjust padding for inputs */
+    margin-bottom: 15px; /* Adjust margin for inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Adjust font size */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent input background */
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 10px; /* Adjust padding for button */
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Message Styling */
+#signInMessage, #loginMessage {
+    margin-top: 10px;
+    font-size: 14px; /* Adjust font size */
+    text-align: center;
+    color: #333; /* Ensure message text is readable */
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 800px) {
+    .container {
+        padding: 10px;
+    }
+
+    .sign-in-form, .login-form {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    input, button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    .sign-in-form, .login-form {
+        padding: 15px;
+    }
+
+    input, button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+}

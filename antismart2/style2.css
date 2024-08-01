@@ -1,0 +1,133 @@
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c87f1e5d;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body covers the full viewport height */
+    background: url('im3.jpg');
+    background-size: cover;
+}
+
+/* Header Styling */
+header {
+    font-size: larger;
+    background-color: #c81ebf8c;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: larger;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header h1:hover {
+    color: #ffeb3b; /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarge the heading */
+}
+
+header p {
+    font-size: larger;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header p:hover {
+    color: #ffeb3b; /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarge the paragraph */
+}
+
+/* Container Styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Main Section Styling */
+main {
+    flex: 1; /* Fill remaining vertical space */
+    padding: 40px 0;
+}
+
+/* Section Styling */
+section {
+    padding: 40px 0;
+}
+
+section h2 {
+    font-size: larger;
+    background-color: #c81ebf8c;
+    color: #ffffff;
+    background: rgba(182, 90, 90, 0.818); /* Semi-transparent background */
+    padding: 20px; /* Increase padding for better spacing */
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Slightly more pronounced shadow */
+    width: 100%;
+    max-width: 400px; /* Make forms smaller */
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+section h2:hover {
+    background: rgba(182, 90, 90, 0.9); /* Darker semi-transparent background on hover */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+    transform: scale(1.03); /* Slightly enlarge the heading */
+}
+
+/* Paragraph Styling */
+section p {
+    font-size: larger;
+    background-color: #c81ebf8c;
+    color: #ffffff;
+    padding: 20px 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section p:hover {
+    background-color: #a14b87; /* Darker background color on hover */
+    color: #ffff00; /* Change text color on hover */
+}
+
+/* List Styling */
+section ul {
+    font-size: larger;
+    background-color: #c81ebf8c;
+    color: #ffffff;
+    padding: 20px 0;
+    list-style-type: disc;
+    padding-left: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section ul:hover {
+    background-color: #a14b87; /* Darker background color on hover */
+    color: #ffff00; /* Change text color on hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #1ebfc88d;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer:hover {
+    background-color: #1b8a5f; /* Darker background color on hover */
+    color: #ffffff; /* Change text color on hover */
+}

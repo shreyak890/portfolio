@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>study videos</title>
+    <link rel="stylesheet" href="style8.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Video Gallery</h1>
+        <div class="entry-form">
+            <input type="file" id="video-upload" accept="video/*">
+            <textarea id="entry-text" placeholder="Write a note for your video entry..."></textarea>
+            <button onclick="addEntry()">Add Video Entry</button>
+        </div>
+        <div class="entries">
+            <ul id="entry-list"></ul>
+        </div>
+    </div>
+    <script src="ms.js"></script>
+</body>
+</html>

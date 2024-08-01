@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my Notes</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <video autoplay muted loop id="videoBG">
+        <source src="jj.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="container">
+        <h1>My notes</h1>
+        <div class="entry-form">
+            <textarea id="entry-text" placeholder="Write your diary entry here..."></textarea>
+            <button onclick="addEntry()">Add Entry</button>
+        </div>
+        <div class="entries">
+            <ul id="entry-list"></ul>
+        </div>
+    </div>
+    <script src="ms.js"></script>
+</body>
+</html>
